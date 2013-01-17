@@ -101,18 +101,21 @@
             width: 180px;
             border: 1px solid red;
             float: left;
+            padding: 5px;
         }
 
         #right_hand_nav {
-            width: 300px;
+            width: 280px;
             border: 1px solid green;
             float: left;
+            padding: 5px;
         }
 
         #main_results {
             width: 600px;
             border: 1px solid black;
             float:left;
+            padding: 5px;
         }
 
         .clear {
@@ -128,6 +131,17 @@
 
         .field_box {
             float: left;
+        }
+
+        #count {
+            float: right;
+            padding-bottom: 5px;
+            color: #552000;
+
+        }
+
+        #results {
+            clear: both;
         }
     </style>
 </head>
@@ -147,8 +161,35 @@
         </form>
     </div>
 <div id="container">
-    <div id="left_hand_nav">&nbsp;</div>
-    <div id="main_results">&nbsp;</div>
+    <div id="left_hand_nav">
+        <b>{terms}</b> in <b>{location}</b>
+    </div>
+    <div id="main_results"><div id="count">Jobs {page} to {page_size} of {count}</div>
+        <div id="results">
+            <div class="row">
+                <h2 class="jobtitle">
+                    <a rel="nofollow" href="#" target="_blank">This is a job posting</a>
+                     - <span class="new">new</span>
+                </h2>
+                <div class="details"><span class="company">Job Board</span> | <span class="location">London</span></div>
+                <div class="summary">
+                    Job board description of a job posting.
+                </div>
+                <span class="date">Posted x days ago on The IT Job Board</span> | <span class="more"><a rel="nofollow" href="#" target="_blank">View More Details</a></span> | <span class="apply"><a rel="nofollow" href="#" target="_blank">Apply</a></span>
+            </div>
+            <div class="row">
+                <h2 class="jobtitle">
+                    <a rel="nofollow" href="#" target="_blank">This is a job posting</a>
+                    - <span class="new">new</span>
+                </h2>
+                <div class="details"><span class="company">Job Board</span> | <span class="location">London</span></div>
+                <div class="summary">
+                    Job board description of a job posting.
+                </div>
+                <span class="date">Posted x days ago on The IT Job Board</span> | <span class="more"><a rel="nofollow" href="#" target="_blank">View More Details</a></span> | <span class="apply"><a rel="nofollow" href="#" target="_blank">Apply</a></span>
+            </div>
+        </div>
+    </div>
     <div id="right_hand_nav">&nbsp;</div>
 </div>
 <div id="copyright">&copy; Copyright 2012-2013 David Long.  All Rights Reserved.
