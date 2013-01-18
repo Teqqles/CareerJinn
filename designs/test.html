@@ -3,112 +3,136 @@
 	<head>
 		<title>Test</title>
 		<style type="text/css">
-		
-		* {
-		margin:0;
-		padding:0;
-		}
-		
-		form { 
-			margin: 2.5em 0 0 14em;
-			padding: 0;
-		}
-		
-		body, html { 
-		        font-family: Arial, helvetica, sans-serif;
-			height: 100%;
-			background:#f2d380;
-		}
-		
-		.banner.spacing {
-			height: 30%;
-			vertical-align:middle;
-			margin-bottom: -5em;
-		}
-		
-		.banner.content { 
-		    background:#f2d380 url('lamp.png') no-repeat left center;
-			height: 13em;
-			width: 50em;
-			margin: 0 auto;
-			border: 1px solid #f2d380;
-		}
-		
-		.banner.content label {
-                    display:block;
-		    width: 13em;
-		    font-size: 1.2em;
-		    margin-left: 4em;
-                    color: #552000
-		}
 
-		.banner.content input.text {
-		    width: 13em;
-		    border: 1px solid #f2d380;
-		    padding: 0.2em;
-		    font-size: 1.2em;
-		    margin-left: 4em;
-		    margin-bottom: 0.2em;
-		}
+            * {
+                margin:0;
+                padding:0;
+            }
 
-                .banner.content input.submit {
-                  float: right;
-                  margin-right: 2em;
-                  padding: 0.2em;
+            form {
+                margin: 2.5em 0 0 14em;
+                padding: 0;
+            }
 
-                }
+            body, html {
+                font-family: Arial, helvetica, sans-serif;
+                height: 100%;
+                background:#f2d380;
+            }
 
-.button:hover{
-text-decoration: none;
-transition: all 0.1s linear;
-}
+            .banner.spacing {
+                height: 30%;
+                vertical-align:middle;
+                margin-bottom: -5em;
+            }
 
-.brown:hover {
-background: #ca8928;
-background: linear-gradient(top, #ca8928 0%,#c69a58 100%);
-box-shadow: inset 0 0px 1px #FFFFFF, 0px 4px 0 #ca8928;
-}
+            .banner.content {
+                background:#f2d380 url('lamp.png') no-repeat left center;
+                height: 13em;
+                width: 50em;
+                margin: 0 auto;
+                border: 1px solid #f2d380;
+            }
 
-.brown {
-border: 1px solid #b5853d;
-color: #ffffff;
-text-shadow: none;
-background: #b27923;
-background: linear-gradient(top, #b27923 0%,#bf8e44 100%);
-box-shadow: inset 0 0px 1px #FFFFFF, 0px 4px 0 #A27020;
-height: 32px;
-}
+            .banner.content label {
+                display:block;
+                width: 13em;
+                font-size: 1.2em;
+                margin-left: 4em;
+                color: #552000
+            }
 
-.round {
-border-radius: 25px !important;
-}
+            .banner.content input.text {
+                width: 13em;
+                border: 1px solid #f2d380;
+                padding: 0.2em;
+                font-size: 1.2em;
+                margin-left: 4em;
+                margin-bottom: 0.2em;
+            }
 
-.large {
-font-size: 20px!important;
-padding: 4px 11px !important;
-}
+            .banner.content input.submit {
+                float: right;
+                margin-right: 2em;
+                padding: 0.2em;
+            }
 
-.button {
-font-size: 13px;
-cursor: pointer;
-text-decoration: none;
-transition: all 0.1s linear;
-padding: 7px 13px;
-border-radius: 4px 4px 4px 4px;
-}
+            .button:hover{
+                text-decoration: none;
+                transition: all 0.1s linear;
+            }
 
+            .brown:hover {
+                background: #ca8928;
+                background: linear-gradient(top, #ca8928 0%,#c69a58 100%);
+                box-shadow: inset 0 0px 1px #FFFFFF, 0px 4px 0 #ca8928;
+            }
 
+            .brown {
+                border: 1px solid #b5853d;
+                color: #ffffff;
+                text-shadow: none;
+                background: #b27923;
+                background: linear-gradient(top, #b27923 0%,#bf8e44 100%);
+                box-shadow: inset 0 0px 1px #FFFFFF, 0px 4px 0 #A27020;
+                height: 32px;
+            }
+
+            .round {
+                border-radius: 25px !important;
+            }
+
+            .large {
+                font-size: 20px!important;
+                padding: 4px 11px !important;
+            }
+
+            .button {
+                font-size: 13px;
+                cursor: pointer;
+                text-decoration: none;
+                transition: all 0.1s linear;
+                padding: 7px 13px;
+                border-radius: 4px 4px 4px 4px;
+            }
+
+            .saved_searches {
+                padding-top: 30px;
+                width: 300px;
+                margin: 0 auto;
+                color: #552000;
+                font-size: 0.8em;
+            }
+
+            .saved_searches ul {
+                margin-top: 10px;
+            }
+
+            .saved_searches hr {
+                background-color: #DD8060;
+                border: 0;
+                height: 1px;
+                margin-bottom: 10px;
+            }
 		</style>
 	</head>
 	<body>
 		<div class="banner spacing"></div>
 		<div class="banner content">
-                <form>
+            <form>
                 <label for="terms">What?</label><input id="terms" class="text" type="text" name="keywords" />
                 <label for="terms">Where?</label><input class="text" type="text" name="location" />
                 <input class="submit button brown round large" type="submit" name="submit" value="Find Jobs" />
-                </form>
-                </div>
+            </form>
+        </div>
+        <div class="saved_searches">
+            <hr />
+            <h2>Saved Searches</h2>
+            <ul>
+                <li><a href="#">Java in London</a></li>
+                <li><a href="#">PHP web developer in Oxford</a></li>
+            </ul>
+        </div>
     <div  style="text-align:center;position:absolute;bottom:0;width:100%">&copy; Copyright 2012-2013 David Long, All Rights Reserved.</div>
 	</body>
 </html>

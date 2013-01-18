@@ -45,7 +45,7 @@
         .banner.content input.text {
             float: left;
             width: 13em;
-            border: 1px solid #f2d380;
+            border: 1px solid #956020;
             padding: 0.2em;
             font-size: 1.2em;
             margin-left: 0.5em;
@@ -142,6 +142,37 @@
 
         #results {
             clear: both;
+            font-size: 0.8em;
+        }
+
+        .saved_searches {
+            padding-top: 30px;
+            color: #552000;
+            font-size: 0.8em;
+        }
+
+        .saved_searches ul {
+            margin-top: 10px;
+        }
+
+        .saved_searches hr {
+            background-color: #DD8060;
+            border: 0;
+            height: 1px;
+            margin-bottom: 10px;
+        }
+
+        .jobtitle h2, .jobtitle a {
+            color: #552000;
+            font-size: 1em;
+        }
+
+        .details, .date {
+            color: #956020;
+        }
+
+        #results .row {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -163,13 +194,20 @@
 <div id="container">
     <div id="left_hand_nav">
         <b>{terms}</b> in <b>{location}</b>
+        <div class="saved_searches">
+            <hr />
+            <h2>Saved Searches</h2>
+            <ul>
+                <li><a href="#">Java in London</a></li>
+                <li><a href="#">PHP web developer in Oxford</a></li>
+            </ul>
+        </div>
     </div>
     <div id="main_results"><div id="count">Jobs {page} to {page_size} of {count}</div>
         <div id="results">
             <div class="row">
                 <h2 class="jobtitle">
                     <a rel="nofollow" href="#" target="_blank">This is a job posting</a>
-                     - <span class="new">new</span>
                 </h2>
                 <div class="details"><span class="company">Job Board</span> | <span class="location">London</span></div>
                 <div class="summary">
@@ -180,7 +218,6 @@
             <div class="row">
                 <h2 class="jobtitle">
                     <a rel="nofollow" href="#" target="_blank">This is a job posting</a>
-                    - <span class="new">new</span>
                 </h2>
                 <div class="details"><span class="company">Job Board</span> | <span class="location">London</span></div>
                 <div class="summary">
