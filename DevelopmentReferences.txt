@@ -9,4 +9,6 @@ Using JQuery via Google - https://developers.google.com/speed/libraries/devguide
 
 Improving page performance - http://developer.yahoo.com/performance/rules.html
 
-Styling and setting up Google Adsense
+Styling and setting up Google Adsense - http://www.seroundtable.com/google-adsense-ad-styles-14170.html
+
+Hosting Static Content on GAE - https://developers.google.com/appengine/docs/java/gettingstarted/staticfiles
