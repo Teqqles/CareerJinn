@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test</title>
+        <meta charset="utf-8" />
+        <link type="text/css" rel="stylesheet" href="stylesheets/main.css" />
+	</head>
+	<body id="home">
+    <div class="banner spacing"></div>
+    <div class="banner content">
+        <form>
+            <label for="terms">What?</label>
+            <input id="terms" class="text" type="text" name="keywords" title="Job Title / Skills / Company Name" />
+            <label for="terms">Where?</label>
+            <input class="text" type="text" name="location" title="City / Country / Post Code" />
+            <input class="submit button brown round large" type="submit" name="submit" value="Find Jobs" />
+        </form>
+    </div>
+    <div class="saved_searches">
+        <hr />
+        <h2>Saved Searches</h2>
+        <ul>
+            <li><a href="#">Java in London</a></li>
+            <li><a href="#">PHP web developer in Oxford</a></li>
+        </ul>
+    </div>
+    <div class="popular_searches">
+        <hr />
+        <h2>Most Popular Searches</h2>
+        <ul>
+            <li><a href="#">Java in London</a></li>
+            <li><a href="#">PHP web developer in Oxford</a></li>
+        </ul>
+    </div>
+    <div id="copyright">&copy; Copyright 2012-2013 David Long, All Rights Reserved.</div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script language="javascript">
+        <!--
+        $(document).ready(function() {
+            $(".text").focus(function(src) {
+                if ($(this).val() == $(this)[0].title) {
+                    $(this).removeClass("defaultTextActive");
+                    $(this).val("");
+                }
+            });
+
+            $(".text").blur(function() {
+                if ($(this).val() == "") {
+                    $(this).addClass("defaultTextActive");
+                    $(this).val($(this)[0].title);
+                }
+            });
+
+            $(".text").blur();
+        });
+        //-->
+    </script>
+	</body>
+</html>
