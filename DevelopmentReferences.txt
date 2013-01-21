@@ -12,3 +12,15 @@ Improving page performance - http://developer.yahoo.com/performance/rules.html
 Styling and setting up Google Adsense - http://www.seroundtable.com/google-adsense-ad-styles-14170.html
 
 Hosting Static Content on GAE - https://developers.google.com/appengine/docs/java/gettingstarted/staticfiles
+
+Url Pattern with Query String - http://stackoverflow.com/questions/2521740/java-filter-url-pattern-specific-to-request-params
+
+Url Patterns in Web.xml - https://developers.google.com/appengine/docs/java/config/webxml
+
+Java Servlets - http://www.sitepoint.com/java-servlets-1/
+
+Unit Testing with Groovy - http://groovy.codehaus.org/Unit+Testing
+
+Using Mocks with Groovy - http://docs.codehaus.org/display/GROOVY/Using+MockFor+and+StubFor
+
+Closures instead of Mocks - http://groovy.codehaus.org/Developer+Testing+using+Closures+instead+of+Mocks
