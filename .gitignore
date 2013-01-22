@@ -41,6 +41,7 @@ error_log
 
 # "temporary" build files
 /target
+/out
 
 # other
 *.iws

@@ -16,11 +16,14 @@ class ThemeWriter {
 
     public ThemeWriter setHttpResponse( HttpServletResponse httpResponse ) {
         this.httpResponse = httpResponse;
+        return this;
     }
 
     public void generateResponse() {
-
+        httpResponse.contentType = "text/html"
     }
 
-
+    public HttpServletResponse getHttpResponse() {
+        return httpResponse;
+    }
 }

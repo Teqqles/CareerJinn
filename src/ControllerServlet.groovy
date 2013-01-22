@@ -6,7 +6,7 @@ class ControllerServlet extends HttpServlet {
 
         ThemeWriter themeWriter = new ThemeWriter( httpResponse );
 
-        resp.contentType = "text/plain"
-        resp.writer.println "Hello Google App Engine Groovy!"
+        httpResponse.contentType = "text/plain"
+        httpResponse.writer.println "Hello Google App Engine Groovy!"
     }
 }
