@@ -24,3 +24,5 @@ Unit Testing with Groovy - http://groovy.codehaus.org/Unit+Testing
 Using Mocks with Groovy - http://docs.codehaus.org/display/GROOVY/Using+MockFor+and+StubFor
 
 Closures instead of Mocks - http://groovy.codehaus.org/Developer+Testing+using+Closures+instead+of+Mocks
+
+MockFor - Servlet Mocking - http://www.coffeaelectronica.com/2010/10/tour-de-mock-5-groovy.html

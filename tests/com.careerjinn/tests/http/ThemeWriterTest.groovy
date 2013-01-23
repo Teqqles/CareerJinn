@@ -2,6 +2,7 @@ package com.careerjinn.tests.http
 
 import com.careerjinn.http.ThemeWriter
 import groovy.mock.interceptor.MockFor
+import groovy.mock.interceptor.StubFor
 
 import javax.servlet.http.HttpServletResponse
 
@@ -12,10 +13,12 @@ import javax.servlet.http.HttpServletResponse
  */
 class ThemeWriterTest extends GroovyTestCase {
 
-    private MockFor mock
+    private MockFor mockHttpServletResponse;
+    private MockFor mockFile;
 
     void setUp( ) {
-        mock         = new MockFor( HttpServletResponse.class );
+        mockHttpServletResponse = new MockFor( HttpServletResponse.class );
+        mockFile                = new MockFor( FileReader.class );
     }
 
     public void testConstructorSetsHttpResponse() {
@@ -24,26 +27,33 @@ class ThemeWriterTest extends GroovyTestCase {
         assert mockHttpServletResponse == themeWriter.httpResponse;
     }
 
-    public void testSetHttpResponse() {
-        def mockHttpServletResponse = castToHttpServletResponse();
-        ThemeWriter themeWriter  = new ThemeWriter( null );
-        themeWriter.httpResponse = mockHttpServletResponse;
-        assert mockHttpServletResponse == themeWriter.httpResponse;
-    }
-
-    public void testGenerateResponse() {
-        def expected = "text/html";
-        mock.demand.with {
+    public void testGenerateResponseHeader() {
+        String expected = "text/html";
+        mockHttpServletResponse.demand.with {
             setContentType{ String got -> assert expected == got }
         }
-        def mockHttpServletResponse = mock.proxyInstance();
-        def themeWriter = new ThemeWriter( mockHttpServletResponse );
-        themeWriter.generateResponse();
-        mock.verify( mockHttpServletResponse );
+        def mockHttpInstance = castToHttpServletResponse();
+        def themeWriter = new ThemeWriter( mockHttpInstance );
+        themeWriter.generateResponseHeader();
+        mockHttpServletResponse.verify( mockHttpInstance as GroovyObject );
+    }
+
+    public void testDisplayTemplate() {
+        String expected = "test";
+        StringWriter stringWriter = new StringWriter();
+        mockHttpServletResponse.demand.with {
+            getWriter{ new PrintWriter( stringWriter ) }
+        }
+
+        def mockHttpInstance = castToHttpServletResponse();
+        def themeWriter = new ThemeWriter( mockHttpInstance );
+        themeWriter.displayTemplate();
+        assert stringWriter.toString() == expected
+        mockHttpServletResponse.verify( mockHttpInstance as GroovyObject );
     }
 
     private HttpServletResponse castToHttpServletResponse() {
-        return mock.proxyInstance();
+        return mockHttpServletResponse.proxyDelegateInstance() as HttpServletResponse;
     }
 
 }
