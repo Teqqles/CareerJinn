@@ -26,3 +26,7 @@ Using Mocks with Groovy - http://docs.codehaus.org/display/GROOVY/Using+MockFor+
 Closures instead of Mocks - http://groovy.codehaus.org/Developer+Testing+using+Closures+instead+of+Mocks
 
 MockFor - Servlet Mocking - http://www.coffeaelectronica.com/2010/10/tour-de-mock-5-groovy.html
+
+Using the Data Store - https://developers.google.com/appengine/docs/java/gettingstarted/usingdatastore
+
+Entity Keys - http://stackoverflow.com/questions/5096507/getting-gae-entity-by-key
