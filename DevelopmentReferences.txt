@@ -30,3 +30,17 @@ MockFor - Servlet Mocking - http://www.coffeaelectronica.com/2010/10/tour-de-moc
 Using the Data Store - https://developers.google.com/appengine/docs/java/gettingstarted/usingdatastore
 
 Entity Keys - http://stackoverflow.com/questions/5096507/getting-gae-entity-by-key
+
+Google App Engine SDK - http://code.google.com/p/googleappengine/wiki/SdkForJavaReleaseNotes
+
+Example Search on GAE - http://code.google.com/p/google-app-engine-samples/source/browse/trunk/search/java/src/com/google/appengine/demos/search/TextSearchServlet.java
+
+Creating a Search Index - https://developers.google.com/appengine/docs/java/search/overview
+
+----
+Non Development Project Topics
+----
+
+Traffic Splitting - https://developers.google.com/appengine/docs/adminconsole/trafficsplitting
+
+Daily Quota Limits - https://developers.google.com/appengine/docs/quotas#Safety_Quotas

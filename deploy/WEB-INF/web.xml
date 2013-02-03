@@ -3,6 +3,14 @@
         <servlet-name>ControllerServlet</servlet-name>
         <servlet-class>ControllerServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SchemaImportServlet</servlet-name>
+        <servlet-class>SchemaImportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SchemaImportServlet</servlet-name>
+        <url-pattern>/import</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ControllerServlet</servlet-name>
         <url-pattern>/</url-pattern>
