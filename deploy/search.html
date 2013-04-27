@@ -1,59 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Test</title>
+    <title>$Site: $PageTitle</title>
     <meta charset="utf-8" />
+    <meta name="keywords" content="$PageKeywords" />
+    <meta name="description" content="$PageDescription" />
     <link type="text/css" rel="stylesheet" href="stylesheets/main.css" />
 </head>
 <body id="search_results">
     <div class="banner spacing"></div>
     <div class="banner content">
         <form>
+            <input type="hidden" name="Page" value="Search" />
             <div class="field_box">
-                <label for="terms">What?</label><input id="terms" class="text" type="text" name="terms" title="Job Title / Skills / Company Name" />
+                <label for="keywords">What?</label><input id="keywords" class="text" type="text" name="q" title="Job Title / Skills / Company Name" value="$keywords" />
             </div>
             <div class="field_box">
-                <label for="location">Where?</label><input id="location" class="text" type="text" name="location" title="City / Country / Post Code" />
+                <label for="location">Where?</label><input id="location" class="text" type="text" name="l" title="City / Country / Post Code" value="$location" />
             </div>
             <div class="field_box">
                 <input class="submit button brown round large" type="submit" name="submit" value="Find Jobs"/>
+                <a class="submit button red round large" href="?Page=SaveSearch&$saveSearchUrl">Save Search</a>
             </div>
+            <% if (related.size() != 0) { %>
+            <div class="relatedskills clear">
+                <ul>
+                    <li><span>Related Skills:</span></li>
+                    <%
+                    related.each {
+                    skill->
+                    %>
+                    <li><a href="?Page=Search&q=<%= skill.key %>&l=$location"><%= skill.value %></a></li>
+                    <% } %>
+                </ul>
+            </div>
+            <% } %>
         </form>
     </div>
 <div id="container">
     <div id="left_hand_nav">
-        <b>{terms}</b> in <b>{location}</b>
+        <b>$keywords</b> $joiner <b>$location</b>
+        <div class="skill_tree">
+            <% if (related.size() != 0) { %>
+                <a href="?Page=SkillTree&$saveSearchUrl">View Skills Tree</a>
+            <% } %>
+        </div>
         <div class="saved_searches">
             <hr />
             <h2>Saved Searches</h2>
             <ul>
-                <li><a href="#">Java in London</a></li>
-                <li><a href="#">PHP web developer in Oxford</a></li>
+                $savedSearches
             </ul>
         </div>
     </div>
-    <div id="main_results"><div id="count">Jobs {page} to {page_size} of {count}</div>
+    <div id="main_results"><% if (results.size() != 0) { %><div id="count">Jobs $pageNumber to $pageSize of $pageCount</div><% } %>
         <div id="results">
+            <% if (results.size() == 0) { %>
+            <div class="no_results">
+                <h2>No Jobs Found
+                </h2>
+                Sorry we could find no results for <b>$keywords</b> $joiner <b>$location</b>, please try to broaden your search by changing your keywords or location.
+            </div>
+            <%
+            }
+            results.each {
+                result->
+            %>
             <div class="row">
                 <h2 class="jobtitle">
-                    <a rel="nofollow" href="#" target="_blank">This is a job posting</a>
+                    <a rel="nofollow" href="#" target="_blank"><%= result.value.name %></a>
                 </h2>
-                <div class="details"><span class="company">Job Board</span> | <span class="location">London</span></div>
+                <div class="details"><span class="company"><%= result.value.vendor %></span> | <span class="location"><%= result.value.location %></span></div>
                 <div class="summary">
-                    Job board description of a job posting.
+                    <%= result.value.content %>
                 </div>
-                <span class="date">Posted x days ago on The IT Job Board</span> | <span class="more"><a rel="nofollow" href="#" target="_blank">View More Details</a></span> | <span class="apply"><a rel="nofollow" href="#" target="_blank">Apply</a></span>
+                <span class="date">Posted on <%= result.value.added %> by <%= result.value.vendor %></span> | <span class="more"><a rel="nofollow" href="<%= result.value.link %>" target="_blank">View More Details</a></span> | <span class="apply"><a rel="nofollow" href="<%= result.value.link %>" target="_blank">Apply</a></span>
             </div>
-            <div class="row">
-                <h2 class="jobtitle">
-                    <a rel="nofollow" href="#" target="_blank">This is a job posting</a>
-                </h2>
-                <div class="details"><span class="company">Job Board</span> | <span class="location">London</span></div>
-                <div class="summary">
-                    Job board description of a job posting.
-                </div>
-                <span class="date">Posted x days ago on The IT Job Board</span> | <span class="more"><a rel="nofollow" href="#" target="_blank">View More Details</a></span> | <span class="apply"><a rel="nofollow" href="#" target="_blank">Apply</a></span>
-            </div>
+            <%
+            }
+            %>
         </div>
     </div>
     <div id="right_hand_nav"><script type="text/javascript"><!--

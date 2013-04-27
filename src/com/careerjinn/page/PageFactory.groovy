@@ -16,6 +16,12 @@ class PageFactory {
         switch( destinationPage ) {
             case "InitialLoad":
                 return new InitialLoadingPage();
+            case "Search":
+                return new SearchPage();
+            case "SkillTree":
+                return new TreePage();
+            case "SaveSearch":
+                return new SaveSearchPage();
             default:
                 return new HomePage();
         }

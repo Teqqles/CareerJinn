@@ -18,6 +18,7 @@ class PageConfiguration {
 
     private Entity entity;
 
+    @SuppressWarnings("GrMethodMayBeStatic")
     private Key generateConfigurationKey() {
         return KeyFactory.createKey( PAGE_DATA_KIND, PAGE_DATA_NAME );
     }
@@ -32,6 +33,8 @@ class PageConfiguration {
 
         Entity commonPageData = new Entity( generateConfigurationKey() );
         commonPageData.setProperty( "Site", "Career Jinn" );
+        commonPageData.setProperty( "DefaultKeywords", "Find Jobs, Job Search, Vacancy Search, Java Jobs" );
+        commonPageData.setProperty( "DefaultDescription", "Job and skill search for IT candidates.  Find the skill set you need to land your dream job, then apply for it." );
 
         DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
         dataStore.put( commonPageData );

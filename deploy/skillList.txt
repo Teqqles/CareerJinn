@@ -1,0 +1,629 @@
+.NET|.NET Developer,.NET Framework,.NET Software Developer,.NET Web Developer
+.NET Developer|.NET,.NET Software Developer,.NET Web Developer
+.NET Framework|.NET
+.NET Software Developer|.NET,.NET Developer,.NET Web Developer
+.NET Web Developer|.NET,.NET Developer,.NET Software Developer
+2nd Line Support|3rd Line Support
+3rd Line Support|2nd Line Support
+ABAP|SAP
+Account Manager|
+ActionScript|Flash
+Active Directory|Windows,Administrator
+Administrator|Windows,Linux,Linux Administrator,UNIX
+ADO.NET Entity Framework|.NET,.NET Developer,.NET Software Developer,.NET Web Developer
+Adobe|Adobe Illustrator,Photoshop,Flash,ActionScript
+Adobe Illustrator|Adobe
+Advertising|Marketing,Digital Marketing
+Aerospace|
+Agile Business Analyst|
+Agile Software Development|Scrum
+AIX|UNIX,Linux
+Ajax|JavaScript,CSS,HTML,jQuery
+Algorithmic Trading
+Amazon AWS
+Analyst
+Analyst Developer
+Analyst Programmer
+Analytics
+Android
+Android Developer
+Ant
+Apache
+Apple
+Apple iOS
+Applications Developer
+Applications Support
+Applications Support Analyst
+Architect
+ASP
+ASP.NET
+ASP.NET Developer
+ASP.NET MVC
+ASP.NET MVC 3
+ASP.NET MVC 4
+Asset Management
+Automated Testing
+Automotive
+Avaya
+B2B
+B2C
+Back Office
+Backup Exec
+Banking|Finance,Investment Banking,SQL,Java,C#
+Bash shell
+BDD
+BGP
+Big Data
+Billing
+BizTalk Server
+Blackberry|Windows,Active Directory,Microsoft,MS Exchange
+Blackberry Enterprise Server
+Blue Coat
+Broadband
+Brocade
+Business Analysis
+Business Analyst
+Business Consultant
+Business Continuity
+Business Development
+Business Intelligence
+Business Intelligence Analyst
+Business Intelligence Consultant
+Business Intelligence Developer
+Business Manager
+Business Objects
+Business Transformation
+BusinessObjects
+C
+C#|.NET,SQL Server,ASP.NET,SQL
+C# .NET Developer
+C# ASP.NET Developer
+C# Developer
+C# Software Developer
+C# Web Developer
+C++|C,C++ Developer
+C++ Developer|C,C++
+Capacity Management
+Capacity Planning
+Castle Windsor
+CCIE|Cisco Certification,Cisco,CCNP,Firewall
+CCNA
+CCNP
+CentOS
+Change Control
+Change Management
+CheckPoint
+CISA
+Cisco
+Cisco ASA
+Cisco Certification
+Cisco IOS
+Cisco Nexus
+Cisco PIX
+CISM
+CISSP
+Citrix|Windows,VMware,Microsoft,Active Directory
+Client/Server
+Cloud Computing|Java,Windows
+Clustering
+CMS
+CodeIgniter
+Cognos
+COM
+Computer Science
+Configuration Management
+Consultant|Finance,SAP,Microsoft
+Content Management
+Continuous Improvement
+Continuous Integration
+Coordinator
+Credit Risk
+CRM
+Crystal Reports
+CSS
+CSS3
+Cucumber|Selenium,BDD,Scrum
+Data Analysis
+Data Analyst
+Data Architecture
+Data Integration
+Data Management
+Data Migration|Migration,SQL Server,Finance
+Data Mining
+Data Modelling
+Data Protection
+Data Warehouse
+Database Developer
+DB2
+DBA
+Degree
+Delivery Manager
+Dell
+Dependency Injection
+Derivative
+Designer
+Desktop Support
+Developer|C# Developer,PHP Developer,Java Developer,Software Engineer,Database Developer,Web Developer
+Development Manager|.NET,Project Management,Finance
+DHCP
+DHTML
+Digital Marketing
+Digital Media
+Disaster Recovery
+Django
+DNS
+Document Management
+Domain-Driven Design
+Drupal
+DSDM
+DV Cleared
+Dynamics AX
+Dynamics CRM
+Eclipse
+E-Commerce
+EIGRP
+Electronic Trading
+Electronics
+Embedded C
+EMC
+Enterprise Architect|TOGAF,Finance,Oracle,SOA
+Enterprise Architecture
+Enterprise Software
+Equities
+ERP
+ESB
+Ethernet
+ETL
+Exchange Server 2003
+Exchange Server 2007
+Exchange Server 2010
+F5
+Facebook
+Finance
+Financial Institution
+Firewall
+Firmware
+Fixed Income
+Flash
+FMCG
+Foreign Exchange (FX)
+French Language
+Front Office
+Front-End Developer
+Front-End Web Developer
+FTP
+Fujitsu
+Games
+GAP Analysis
+German Language
+Git (software)
+Google
+Google Analytics
+Graduate|Graduate Developer
+Graduate Developer
+Hadoop|Big Data
+Hedge funds
+Hibernate
+High Availability
+HP
+HP Quality Center
+HTML
+HTML5
+HTTP
+Hudson
+Hyperion
+Hyper-V
+IBM
+IIS
+Incident Management
+Informatica
+Information Architecture
+Information Management
+Information Security
+Infrastructure Analyst
+Infrastructure Architect
+Infrastructure Engineer
+Infrastructure Manager
+Integration Testing
+Internet
+Intranet
+Inversion of Control
+Investment Banking
+Investment Management
+iOS Developer
+IP Telephony
+iPad
+iPhone
+ISEB
+ISO 9001
+ISO/IEC 27001
+ISTQB
+IT Project Manager
+IT Support
+ITIL
+ITIL Certification
+ITSM
+J2EE
+Java|Java Developer,Developer,Java/J2EE Developer,J2EE,Java EE
+Java Developer|Java,Developer,Java/J2EE Developer,J2EE,Java EE
+Java EE|Java Developer,Java,Developer,Java/J2EE Developer,J2EE
+Java/J2EE Developer
+JavaScript
+JavaScript Developer
+JBoss
+JDBC
+Jenkins
+JIRA
+JMS
+jQuery
+JSON
+JSP
+Junior|.NET,C#,Degree,SQL
+Junior Developer
+Juniper
+JUnit
+Kanban
+KnockoutJS
+LAMP
+LAN
+Law
+LDAP
+Lead Architect|Banking,Finance,.NET,Java
+Lead Developer|.NET,C#,JavaScript,CSS,ASP.NET
+Legal
+LINQ
+Linux
+Linux Administrator|Linux,Red Hat,Apache,MySQL,Perl
+Linux Engineer|Linux,Red Hat,Apache
+Linux Systems Administrator
+Load Balancing
+LoadRunner
+Logistics
+Lync
+Magento
+Mainframe
+Management Information System
+Manual Testing|QA,SQL,Automated Testing
+Manufacturing
+Marketing|Degree,CSS,HTML,Finance
+Mathematics|Degree,Computer Science,C#,Finance
+Maven
+MCAD
+MCITP
+MCP
+MCSA
+MCSD
+MCSE
+MCTS
+MDX
+Microsoft|MS Excel,SQL Server,Windows
+Microsoft Analysis Services|SQL Server Analysis Services,SQL Server,SQL Server Reporting Services
+Microsoft Certification|Microsoft,Windows,SQL Server
+Middleware|Oracle,Java,Finance
+Migration|SQL,Data Migration,Microsoft
+Military|Electronics,Security Cleared,Degree
+Mobile App|Android,CSS,JavaScript
+Mobile Application Development|Mobile App,CSS,Android,JavaScript
+Mobile Developer|Android,Apple iOS,Mobile App
+MongoDB|NoSQL,Java
+Moq
+MPLS
+MS Access|SQL,MS Excel,SQL Server
+MS Excel|Microsoft,SQL Server,Windows
+MS Exchange|Windows,Active Directory
+MS Office|Microsoft,MS Excel,Windows
+MS PowerPoint|MS Excel,Microsoft,MS Office
+MS Project|Project Management,MS Excel,Microsoft
+MS Visio|MS Excel,MS Office,Microsoft
+MSTest|.NET,C#
+Multithreading|Java,C#,Finance
+Music|SQL Server,C#
+MVC
+MVVM
+MySQL|PHP,Linux,JavaScript
+Nagios
+NAS
+NetApp|VMware,Windows,SAN
+NetBackup|VMware,Windows,SAN
+Network Design
+Network Engineer
+Network Management|Cisco,Firewall,Cisco Certification
+Network Security
+Network Support
+Network Support
+NHibernate|.NET,C#,SQL Server
+Ninject
+Node.js
+NoSQL|Java,MongoDB,MySQL
+N-Tier
+NUnit
+Objective-C
+OLAP
+Online Games|Games,Java,JavaScript
+Online Marketing|Marketing,SEO,E-Commerce
+OO
+OOA/OOD
+OOD
+OOP
+Open Source
+Oracle
+Oracle 10g
+Oracle 11g
+Oracle 8/8i
+Oracle Applications
+Oracle BI EE
+Oracle Consultant
+Oracle DBA
+Oracle Developer
+Oracle EBS
+Oracle EBS R12
+Oracle Financials
+Oracle Forms
+Oracle RAC
+Oracle Reports
+OSPF
+Pair Programming
+Pay per click
+PCI DSS
+Penetration Testing
+Performance Management
+Performance Testing
+Perl
+Pharmaceutical
+PhD
+Photoshop
+PHP|Zend,PHP5,PHP Developer,PHP Web Developer
+PHP Developer|Zend,PHP,PHP5,PHP Web Developer
+PHP Web Developer|Zend,PHP,PHP5,PHP Developer
+PHP5|Zend,PHP,PHP Developer,PHP Web Developer
+Physics
+PL/SQL
+PMI
+PMI Certification
+PMP
+Portfolio Management
+PostgreSQL
+PowerShell
+Pre Sales Consultant
+PRINCE
+PRINCE2
+PRINCE2 Certification
+PRINCE2 Practitioner
+Problem Management
+Process Management
+Product Management
+Product Manager
+Programme Management
+Programme Manager
+Project Management
+Project Manager
+Project Planning
+Publishing
+Puppet
+Python
+QA
+QA Engineer
+QlikView
+Quality Management
+QuickTest Pro
+Razor View Engine
+RDBMS
+Red Hat
+Red Hat Enterprise Linux
+Red Hat Enterprise Linux
+Refactoring
+Regression Testing
+Release Management
+Remedy
+Replication
+Requirements Analysis
+Resource Management
+REST|RESTful,SOA,SOAP
+RESTful|REST,SOA,SOAP
+Retail
+Rhino Mocks
+Risk Management
+Root Cause Analysis
+Ruby
+Ruby on Rails
+RUP
+SaaS|Salesforce.com,Cloud Computing
+Sage
+Sales Consultant
+Salesforce.com|SaaS
+SAN
+SAP|ABAP,SAP BW,SAP CO,SAP Consultant,SAP FI/CO,SAP Implementation,SAP Manager
+SAP BW
+SAP CO
+SAP Consultant
+SAP FI/CO
+SAP Implementation
+SAP Manager
+Sarbanes-Oxley
+SAS
+SC Cleared
+Scala
+SCCM
+SCOM
+Scrum|Agile Software Development
+Security Analyst
+Security Cleared
+Security Consultant
+Security Engineer
+Security Management
+Selenium
+Senior .NET Developer
+Senior Analyst
+Senior Architect
+Senior Business Analyst
+Senior C# Developer
+Senior Consultant
+Senior Developer
+Senior Java Developer
+Senior Manager
+Senior Project Manager
+Senior Software Developer
+Senior Software Engineer
+Senior Web Developer
+SEO
+Service Analyst
+Service Delivery
+Service Desk Analyst
+Service Management
+Service Manager
+Services Delivery Manager
+Servlets
+SharePoint
+SharePoint 2010
+SharePoint Developer
+SharePoint Server
+Shell Script
+Silverlight
+Six Sigma
+SLA
+SMTP
+SNMP
+SOA|Software Architecture
+SOAP
+Social Media|Social Network
+Social Network|Social Media
+Software Architecture
+Software Developer|Software Engineer,Software Engineering
+Software Engineer|Software Developer,Software Engineering
+Software Engineering|Software Developer,Software Engineer
+Software Manager
+Software Testing
+Solaris
+Solutions Architect
+Spring|Hibernate,Spring MVC
+Spring MVC|Spring
+SPSS
+SQL
+SQL DBA
+SQL Developer
+SQL Server|SQL Server 2000,SQL Server 2005,SQL Server 2008,SQL Server 2012,SQL Server DBA,SQL Server Developer
+SQL Server 2000
+SQL Server 2005
+SQL Server 2008
+SQL Server 2012
+SQL Server Analysis Services
+SQL Server DBA
+SQL Server Developer
+SQL Server Integration Services
+SQL Server Reporting Services
+SSL
+Stakeholder Engagement
+Stakeholder Management
+Statistics
+Struts
+Subversion
+Sun
+Supplier Management
+Support Analyst
+Support Engineer
+Support Manager
+Sybase
+Symantec
+Symfony
+System Testing
+Systems Administrator
+Systems Analysis
+Systems Analyst
+Systems Engineer
+Systems Manager
+TCP/IP
+TDD
+Team Foundation Server
+Team Leader
+Technical Analyst
+Technical Architect
+Technical Architecture
+Technical Consultant
+Technical Engineer
+Technical Leader
+Technical Manager
+Technical Support
+Technical Support Engineer
+Telecoms
+Teradata
+Teradata DBA
+Test Analyst
+Test Automation
+Test Engineer
+Test Leader
+Test Management
+Test Manager
+Test Scripting
+Test Strategy
+Tester
+TIBCO
+Time Management
+TOGAF
+Tomcat
+T-SQL
+Twitter
+Ubuntu
+Umbraco
+UML
+Unified Communications
+Unit Testing|
+UNIX|Linux|Systems Administrator
+Use Case|User Stories
+User Acceptance Testing|User Stories,QA,QA Engineer,Selenium
+User Stories|Use Case
+Validation|
+VB|VB6,VBA,VBScript
+VB.NET|VB.NET Developer,VB
+VB.NET Developer,VB.NET,VB
+VB6|VB,VBA,VBScript
+VBA|VBScript
+VBScript|VBA
+Veritas|
+Visual Studio|.NET,.NET Developer,.NET Framework,.NET Software Developer,.NET Web Developer,VB, VB.NET,VB.NET Developer,VB6,VBA,VBScript
+Visualisation|
+VLAN|
+VMware|VMware ESX,VMware ESXi,VMware Infrastructure,VMware
+VMware Certified Professional|VCP,VMware
+VCP|VMware Certified Professional,VMware
+VMware ESX|VMware ESXi,VMware Infrastructure,VMware
+VMware ESXi|VMware ESX,VMware Infrastructure,VMware
+VMware Infrastructure|VMware ESX,VMware ESXi,VMware
+VoIP|
+VPN|
+vSphere|
+W3C|HTML,HTML5,XHTML,CSS
+WAN|
+Waterfall|
+WCF|.NET,C#,C# Developer
+Web Analytics|
+Web Application Development|Web Development,Web Developer,Zend,PHP,PHP5,PHP Developer,PHP Web Developer,.NET,.NET Developer,.NET Framework,.NET Software Developer,.NET Web Developer
+Web Design|Web Designer
+Web Designer|Web Design
+Web Developer|Web Development,Web Developer,Zend,PHP,PHP5,PHP Developer,PHP Web Developer,.NET,.NET Developer,.NET Framework,.NET Software Developer,.NET Web Developer
+Web Development|Web Developer,Zend,PHP,PHP5,PHP Developer,PHP Web Developer,.NET,.NET Developer,.NET Framework,.NET Software Developer,.NET Web Developer
+Web Services|REST,RESTful,SOA,SOAP
+WebDriver|QA,QA Engineer,Selenium
+WebLogic|WebSphere,J2EE,Java,Java Developer,Java EE,Java/J2EE Developer,JBOSS,Tomcat,Linux
+WebSphere|WebLogic,J2EE,Java,Java Developer,Java EE,Java/J2EE Developer,JBOSS,Tomcat
+Windows|Windows XP,Windows 7,Windows 8,Windows Server 2003,Windows Server 2008,Windows Server 2012,Windows Vista
+Windows 7|Windows,Windows XP,Windows 8,Windows Server 2003,Windows Server 2008,Windows Server 2012,Windows Vista
+Windows 8|Windows,Windows XP,Windows 7,Windows Server 2003,Windows Server 2008,Windows Server 2012,Windows Vista
+Windows Azure|
+Windows Server 2003|Windows,Windows XP,Windows 7,Windows 8,Windows Server 2008,Windows Server 2012,Windows Vista
+Windows Server 2008|Windows,Windows XP,Windows 7,Windows 8,Windows Server 2003,Windows Server 2012,Windows Vista
+Windows Server 2012|Windows,Windows XP,Windows 7,Windows 8,Windows Server 2003,Windows Server 2008,Windows Vista
+Windows Vista|Windows,Windows XP,Windows 7,Windows 8,Windows Server 2003,Windows Server 2008,Windows Server 2012,Windows Vista
+Windows XP|Windows,Windows 7,Windows 8,Windows Server 2003,Windows Server 2008,Windows Server 2012,Windows Vista
+WinForms|
+Wireless|
+WordPress|Zend,PHP,PHP5,PHP Developer,PHP Web Developer
+Workflow|
+WPF|.NET,C#,C# Developer
+XenApp|XenDesktop,XenServer
+XenDesktop|XenApp
+XenServer|XenDesktop,XenApp
+XHTML|XML,HTML,HTML5
+XML|XSL,XSLT,XHTML
+XSL|XSLT,XML
+XSLT|XSL,XML
+Zend|PHP,PHP5,PHP Developer,PHP Web Developer

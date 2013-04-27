@@ -15,8 +15,6 @@ import groovy.text.Template;
  */
 class ThemeWriter {
 
-    private def templateBinds;
-
     private HttpServletResponse httpResponse;
 
     ThemeWriter( HttpServletResponse httpResponse ) {
@@ -31,14 +29,15 @@ class ThemeWriter {
         httpResponse.contentType = "text/html"
     }
 
-    public void displayTemplate() {
+    public void displayTemplate( String template = "home.html", def pageBinds = [] ) {
         PageConfiguration pageConfig = ConfigurationFactory.createPageConfiguration();
         Entity pageEntity = pageConfig.retrievePageData();
         def binding = [ Site: pageEntity.getProperty( "Site" )
                       , PageTitle: "Find your new job and the skills you need"
-                      , PageKeywords: "test"
-                      , PageDescription: "Test" ]
-        def templateFile = new FileReader( "home.html" );
+                      , PageKeywords: pageEntity.getProperty( "DefaultKeywords" )
+                      , PageDescription: pageEntity.getProperty( "DefaultDescription" ) ];
+        binding += pageBinds;
+        def templateFile = new FileReader( template );
         SimpleTemplateEngine engine = new SimpleTemplateEngine( )
         Template templateToDisplay = engine.createTemplate( templateFile )
         httpResponse.writer.print templateToDisplay.make( binding ).toString();
@@ -46,14 +45,5 @@ class ThemeWriter {
 
     public HttpServletResponse getHttpResponse() {
         return httpResponse;
-    }
-
-    public ThemeWriter setTemplateBinds( GroovyObject templateBinds ) {
-
-        return this;
-    }
-
-    public GroovyObject getTemplateBinds() {
-
     }
 }

@@ -11,27 +11,30 @@
     <div class="banner spacing"></div>
     <div class="banner content">
         <form>
-            <label for="terms">What?</label>
-            <input id="terms" class="text" type="text" name="keywords" title="Job Title / Skills / Company Name" />
-            <label for="terms">Where?</label>
-            <input class="text" type="text" name="location" title="City / Country / Post Code" />
+            <input type="hidden" name="Page" value="Search" />
+            <label for="keywords">What?</label>
+            <input id="keywords" class="text" type="text" name="q" title="Job Title / Skills / Company Name" />
+            <label for="location">Where?</label>
+            <input id="location" class="text" type="text" name="l" title="City / Country / Post Code" />
             <input class="submit button brown round large" type="submit" name="submit" value="Find Jobs" />
         </form>
     </div>
-    <div class="saved_searches">
+    <div class="saved_searches $hiddenSearchSection">
         <hr />
         <h2>Saved Searches</h2>
         <ul>
-            <li><a href="#">Java in London</a></li>
-            <li><a href="#">PHP web developer in Oxford</a></li>
+            $savedSearches
         </ul>
     </div>
     <div class="popular_searches">
         <hr />
-        <h2>Most Popular Searches</h2>
+        <h2>Popular Searches</h2>
         <ul>
-            <li><a href="#">Java in London</a></li>
-            <li><a href="#">PHP web developer in Oxford</a></li>
+            <li><a href="?Page=Search&q=Developer&l=South+East">Developer in South East</a></li>
+            <li><a href="?Page=Search&q=Java+Developer&l=London">Java Developer in London</a></li>
+            <li><a href="?Page=Search&q=SQL+Server&l=City+of+London">SQL Server in City of London</a></li>
+            <li><a href="?Page=Search&q=C%23&l=London">C# in London</a></li>
+            <li><a href="?Page=Search&q=PHP+Developer&l=London">PHP Developer in London</a></li>
         </ul>
     </div>
     <div id="copyright">&copy; Copyright 2012-2013 David Long, All Rights Reserved.</div>
