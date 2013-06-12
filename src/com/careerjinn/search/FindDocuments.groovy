@@ -8,12 +8,24 @@ import com.google.appengine.api.search.SearchException;
 import com.google.appengine.api.search.ScoredDocument;
 
 /**
+ *
+ * Wrapper for the Google Search API, takes the user query and returns search results where available
+ *
  * @author David Long
  * Date: 18/04/13
  * Time: 20:52
  */
 class FindDocuments {
 
+    /**
+     * Takes the user query, the number of results to return and a cursor.  Calls the Search API
+     * with title, vendor, location, displayContent, link and added date and returns the result
+     *
+     * @param queryString
+     * @param limit
+     * @param cursor
+     * @return Results<ScoredDocument>
+     */
     public static Results<ScoredDocument> findDocuments( String queryString, int limit, Cursor cursor ) {
         try {
             QueryOptions options = QueryOptions.newBuilder()

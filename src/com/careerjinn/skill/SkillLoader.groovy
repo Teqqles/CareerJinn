@@ -10,6 +10,13 @@ import com.google.appengine.api.datastore.Key
  */
 class SkillLoader {
 
+    /**
+     * Loads each skill from a text file, assigning a name, a normalized lowercase name, a count and any related skills
+     * returning the complete entity list at the end
+     *
+     * @param entityParent
+     * @return List<Entity>
+     */
     public List<Entity> loadSkillList( Key entityParent ) {
             BufferedReader fileBuffer;
             FileReader reader = null;

@@ -44,6 +44,7 @@ body, html {
     width: 1100px;
     margin: 0;
     border: 1px solid #f2d380;
+    overflow: hidden;
 }
 
 #home .banner.content label {

@@ -26,7 +26,8 @@ class ThemeWriter {
     }
 
     public void generateResponseHeader() {
-        httpResponse.contentType = "text/html"
+        httpResponse.contentType = "text/html";
+        httpResponse.characterEncoding = "UTF-8";
     }
 
     public void displayTemplate( String template = "home.html", def pageBinds = [] ) {
@@ -38,8 +39,8 @@ class ThemeWriter {
                       , PageDescription: pageEntity.getProperty( "DefaultDescription" ) ];
         binding += pageBinds;
         def templateFile = new FileReader( template );
-        SimpleTemplateEngine engine = new SimpleTemplateEngine( )
-        Template templateToDisplay = engine.createTemplate( templateFile )
+        SimpleTemplateEngine engine = new SimpleTemplateEngine( );
+        Template templateToDisplay = engine.createTemplate( templateFile );
         httpResponse.writer.print templateToDisplay.make( binding ).toString();
     }
 

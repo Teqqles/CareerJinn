@@ -20,7 +20,12 @@ class TreePage implements Page {
     private SearchParameters params;
     private def properties;
 
-    public TreePage() {
+    /**
+     * TreePage
+     *
+     * Sets some default properties for page generation
+     *
+     */    public TreePage() {
 
         //set some default properties so Groovy does not fail if none are set.
         properties = [
@@ -31,18 +36,39 @@ class TreePage implements Page {
 
     }
 
+    /**
+     * setHttpRequest
+     *
+     * Sets the HTTP request object ready for use in page rendering
+     *
+     * @param servletRequest
+     * @return Page
+     */
     @Override
     Page setHttpRequest(HttpServletRequest servletRequest) {
         httpRequest = servletRequest;
         return this;
     }
 
+    /**
+     * setHttpResponse
+     *
+     * Sets the HTTP response object ready for use in page rendering
+     *
+     * @param servletResponse
+     * @return Page
+     */
     @Override
     Page setHttpResponse(HttpServletResponse servletResponse) {
         httpResponse = servletResponse;
         return this;
     }
 
+    /**
+     * renderPage
+     *
+     * Builds the SearchParameters object, and lists any related skills for tree graphic generation
+     */
     @Override
     void renderPage() {
         params             = new SearchParameters();

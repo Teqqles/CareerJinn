@@ -7,7 +7,7 @@ import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory
 
 /**
- * @author Dave Long
+ * @author David Long
  * Date: 27/01/13
  * Time: 18:11
  */
@@ -23,12 +23,20 @@ class PageConfiguration {
         return KeyFactory.createKey( PAGE_DATA_KIND, PAGE_DATA_NAME );
     }
 
+    /**
+     * Retrieves the page configuration entity for usage on each site page
+     *
+     * @return Entity
+     */
     public Entity retrievePageData() {
         DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
         entity = dataStore.get( generateConfigurationKey() );
         return entity;
     }
 
+    /**
+     * Populates common data properties for meta components in the HTML document
+     */
     public void configurePageData() {
 
         Entity commonPageData = new Entity( generateConfigurationKey() );

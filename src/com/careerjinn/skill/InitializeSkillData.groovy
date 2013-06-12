@@ -14,6 +14,9 @@ class InitializeSkillData {
 
     Entity parentEntity;
 
+    /**
+     * Adds a parent entity ready for loading the skills dictionary
+     */
     public InitializeSkillData() {
         parentEntity = new Entity( "Skill" ); // global parent entity for all skills
     }
@@ -23,10 +26,9 @@ class InitializeSkillData {
         return parentEntity.getKey();
     }
 
-    public Entity retrieveSkillData() {
-        return new Entity( "Skill", generateSkillDataKey() );
-    }
-
+    /**
+     * Loads the skills list and adds each entry into the datastore
+     */
     public void createSkillEntries() {
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         SkillLoader loader = new SkillLoader();
@@ -35,7 +37,5 @@ class InitializeSkillData {
             datastore.put( list );
         }
     }
-
-
 
 }

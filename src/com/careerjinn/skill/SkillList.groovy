@@ -17,10 +17,19 @@ class SkillList {
     private DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     private Query skillQuery = new Query( "Skill" );
 
+    /**
+     * Sets up the skill list in the data store for loading
+     */
     public SkillList() {
         prepareList();
     }
 
+    /**
+     * Filters the skill list by the entity normalized name
+     *
+     * @param entityName
+     * @return List<Entity>
+     */
     public List<Entity> filter( String entityName ) {
         skillQuery.setFilter( new Query.FilterPredicate( 'normal_name', Query.FilterOperator.EQUAL, entityName ) );
         prepareList();
@@ -32,6 +41,11 @@ class SkillList {
                 .asList( FetchOptions.Builder.withDefaults() );
     }
 
+    /**
+     * Retrieves the previously prepared or filtered list
+     *
+     * @return List<Entity>
+     */
     public List<Entity> getList() {
         return skillList;
     }

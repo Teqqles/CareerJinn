@@ -17,18 +17,39 @@ class SaveSearchPage implements Page {
     private HttpServletResponse httpResponse;
     private SearchParameters params;
 
+    /**
+     * setHttpRequest
+     *
+     * Sets the HTTP request object ready for use in page rendering
+     *
+     * @param servletRequest
+     * @return Page
+     */
     @Override
     Page setHttpRequest( HttpServletRequest servletRequest ) {
         httpRequest = servletRequest;
         return this;
     }
 
+    /**
+     * setHttpResponse
+     *
+     * Sets the HTTP response object ready for use in page rendering
+     *
+     * @param servletResponse
+     * @return Page
+     */
     @Override
     Page setHttpResponse( HttpServletResponse servletResponse ) {
         httpResponse = servletResponse;
         return this;
     }
 
+    /**
+     * renderPage
+     *
+     * Adds the save search to a cookie on the users machine and then redirects back to the search results page
+     */
     @Override
     void renderPage() {
 

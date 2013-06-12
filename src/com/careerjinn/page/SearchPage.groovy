@@ -28,6 +28,12 @@ class SearchPage implements Page {
     private SearchParameters params;
     private def properties;
 
+    /**
+     * SearchPage
+     *
+     * Sets some default properties for page generation
+     *
+     */
     public SearchPage() {
 
         //set some default properties so Groovy does not fail if none are set.
@@ -42,20 +48,41 @@ class SearchPage implements Page {
 
     }
 
+    /**
+     * setHttpRequest
+     *
+     * Sets the HTTP request object ready for use in page rendering
+     *
+     * @param servletRequest
+     * @return Page
+     */
     @Override
-    Page setHttpRequest(HttpServletRequest servletRequest) {
+    public Page setHttpRequest(HttpServletRequest servletRequest) {
         httpRequest = servletRequest;
         return this;
     }
 
+    /**
+     * setHttpResponse
+     *
+     * Sets the HTTP response object ready for use in page rendering
+     *
+     * @param servletResponse
+     * @return Page
+     */
     @Override
-    Page setHttpResponse(HttpServletResponse servletResponse) {
+    public Page setHttpResponse(HttpServletResponse servletResponse) {
         httpResponse = servletResponse;
         return this;
     }
 
+    /**
+     * renderPage
+     *
+     * Builds the SearchParameters and query objects, gathers any results and adds them to the page display
+     */
     @Override
-    void renderPage() {
+    public void renderPage() {
 
         params             = new SearchParameters();
         SearchQuery search = new SearchQuery();
@@ -122,10 +149,10 @@ class SearchPage implements Page {
     private LinkedHashMap resultDocumentConverter( Document doc ) {
         return [ name: extractDocumentField( doc, "title" ),
                  added: extractDocumentField( doc, "added" ),
-                 content: extractDocumentField( doc, "displayContent" ),
+                 content: trimString( extractDocumentField( doc, "displayContent" ), 500, true ),
                  location: extractDocumentField( doc, "location" ),
                  vendor: extractDocumentField( doc, "vendor" ),
-                 link: extractDocumentField( doc, "link" ) ];
+                 link: extractDocumentField( doc, "link" ).replace( "&", "&amp;" ) ];
     }
 
     private String extractDocumentField( Document doc, String fieldName ) {
@@ -138,11 +165,30 @@ class SearchPage implements Page {
                 case Field.FieldType.ATOM:
                     return HtmlEncode.encode( doc.getOnlyField(fieldName).getAtom() );
                 case Field.FieldType.DATE:
-                    return doc.getOnlyField(fieldName).getDate();;
+                    return doc.getOnlyField(fieldName).getDate();
             }
         }
 
         return "";
+    }
+
+    public static String trimString(String string, int length, boolean soft) {
+        if(string == null || string.trim().isEmpty()){
+            return string;
+        }
+
+        StringBuffer sb = new StringBuffer(string);
+        int actualLength = length - 3;
+        if(sb.length() > actualLength){
+            // -3 because we add 3 dots at the end. Returned string length has to be length including the dots.
+            if(!soft)
+                return sb.insert(actualLength, "...").substring(0, actualLength+3);
+            else {
+                int endIndex = sb.indexOf(" ",actualLength);
+                return sb.insert(endIndex,"...").substring(0, endIndex+3);
+            }
+        }
+        return string;
     }
 
 }

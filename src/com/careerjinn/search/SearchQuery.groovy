@@ -1,5 +1,7 @@
 package com.careerjinn.search
 
+import java.text.SimpleDateFormat
+
 /**
  * @author David Long
  * Date: 18/04/13
@@ -11,7 +13,14 @@ class SearchQuery {
     String location = "";
     String query = "";
 
+    /**
+     * Constructs the search query string from a SearchParameters object
+     *
+     * @param params
+     * @return String
+     */
     public String buildSearchQuery( SearchParameters params ) {
+        String today = new SimpleDateFormat("yyyy-MM-dd").format( new Date() );
         if( params.getKeywords() != "" ) {
             keywords = sanitizeTerms( params.getKeywords() );
             if ( keywords != "" ) {
@@ -27,13 +36,15 @@ class SearchQuery {
                 query += "location:(" + location + ")";
             }
         }
+        if ( query != "" ) {
+            query += " AND ";
+        }
+        query += "expires >= " + today;
         System.out.println( query );
         return query;
     }
 
     /**
-     * sanitizeTerms
-     *
      * Remove characters or character grouping which will break the Search API
      *
      * @param terms
@@ -56,7 +67,7 @@ class SearchQuery {
         return terms;
     }
 
-    public String removeUnclosedCharacter( String terms, char character ) {
+    private String removeUnclosedCharacter( String terms, char character ) {
         StringBuilder removedTerms = new StringBuilder( terms );
         Boolean open = false;
         int lastOccurrence = 0;
@@ -72,7 +83,7 @@ class SearchQuery {
         return removedTerms;
     }
 
-    public String removeUnclosedCharacter( String terms, char character, char closeCharacter ) {
+    private String removeUnclosedCharacter( String terms, char character, char closeCharacter ) {
         StringBuilder removedTerms = new StringBuilder( terms );
         int openedCharGroups = 0;
         int i = 0;

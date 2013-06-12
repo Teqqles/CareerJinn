@@ -2,4 +2,11 @@
     <application>careerjinn</application>
     <threadsafe>false</threadsafe>
     <version>1</version>
+    <admin-console>
+        <page name="Appstats" url="/appstats" />
+        <page name="Job Clear" url="/import?Site=clear" />
+        <page name="Job Import - CV Library" url="/import?Site=cvlibrary" />
+        <page name="Job Import - ITJB (Lite)" url="/import?Site=itjblite" />
+        <page name="Job Import - ITJB" url="/import?Site=itjb" />
+    </admin-console>
 </appengine-web-app>

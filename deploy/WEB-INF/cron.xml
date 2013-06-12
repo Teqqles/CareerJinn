@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+    <cron>
+        <url>/import?Site=clear</url>
+        <description>Clear all data from job database</description>
+        <schedule>every sunday 21:00</schedule>
+        <timezone>Europe/London</timezone>
+    </cron>
+    <cron>
+        <url>/import?Site=cvlibrary</url>
+        <description>Add jobs from CV Library</description>
+        <schedule>every sunday 21:30</schedule>
+        <timezone>Europe/London</timezone>
+    </cron>
+    <cron>
+        <url>/import?Site=itjb</url>
+        <description>Add jobs from ITJB</description>
+        <schedule>every sunday 22:00</schedule>
+        <timezone>Europe/London</timezone>
+    </cron>
+</cronentries>

@@ -1,7 +1,9 @@
 package com.careerjinn.page
 
 /**
- * @author Dave Long
+ * A static factory for loading the user requested page
+ *
+ * @author David Long
  * Date: 27/01/13
  * Time: 17:52
  */
