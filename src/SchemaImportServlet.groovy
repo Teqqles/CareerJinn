@@ -114,29 +114,29 @@ class SchemaImportServlet extends HttpServlet {
         calendar.add( Calendar.DAY_OF_MONTH, 7 );
         Date expires = calendar.getTime();
 
-        URL url = new URL( "http://www.find-it-jobs.com/feeds/jobomix_en_uk.php" );
+        URL url = new URL( "http://www.theitjobboard.co.uk/monitor/ads.php" );
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setConnectTimeout( 60000 );
         conn.setReadTimeout( 60000 );
 
-        GPathResult jobs = new XmlSlurper().parse( new InputStreamReader( conn.getInputStream(), "UTF-8" ) );
+        GPathResult adverts = new XmlSlurper().parse( new InputStreamReader( conn.getInputStream(), "UTF-8" ) );
 
-        for( int i = 0; i < jobs.job.size(); i++ ) {
+        for( int i = 0; i < adverts.advert.size(); i++ ) {
             //noinspection GroovyAssignabilityCheck
-            GPathResult xmlJob = jobs.job.getAt( i );
-            String vendor = xmlJob."company-name".text();
+            GPathResult xmlJob = adverts.advert.getAt( i );
+            String vendor = xmlJob."contact_office".text();
             if ( vendor.isEmpty() ) {
                 vendor = "The IT Job Board";
             }
             JobDocument job = new JobDocument();
             job.setTitle( xmlJob.title.text() )
-                    .setContent( xmlJob.description.text() )
-                    .setSalary( 0.00, 0.00, xmlJob."salary-text".text() )
-                    .setLocation( xmlJob.location.text() )
+                    .setContent( xmlJob."advert_body".text() )
+                    .setSalary( 0.00, 0.00, xmlJob.salary.text() )
+                    .setLocation( xmlJob."free_location".text() )
                     .setVendor( vendor )
                     .setAdded( new Date() )
                     .setExpires( expires )
-                    .setLink( xmlJob."detail-url".text() );
+                    .setLink( xmlJob."url".text() );
             try {
                 // Put the document.
                 importer.addToIndex( job, expires );

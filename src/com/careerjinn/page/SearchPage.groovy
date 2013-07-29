@@ -98,13 +98,16 @@ class SearchPage implements Page {
         LinkedHashMap viewableResults = [];
         int resultCounter = 0;
         long resultCount = 0;
-        long pageNumber = 0;
+        int pageNumber = 1;
+        int jobsPerPage = 20;
+        if ( httpRequest.getParameter( "p" ) ) {
+            pageNumber = httpRequest.getParameter( "p" ).toInteger();
+        }
         long resultReturned = 0;
         try {
-            results = FindDocuments.findDocuments( search.buildSearchQuery( params ), 20, Cursor.newBuilder().build() );
+            results = FindDocuments.findDocuments( search.buildSearchQuery( params ), jobsPerPage, pageNumber );
             resultCount = results.numberFound;
             resultReturned = results.numberReturned;
-            pageNumber = 1;
             for (ScoredDocument document : results) {
                 viewableResults.put( resultCounter++, resultDocumentConverter( document ) );
             }
@@ -114,8 +117,9 @@ class SearchPage implements Page {
         properties += [ results: viewableResults ];
         properties += [ related: getRelatedSkills( params.getKeywords() ) ]
         properties += [ pageCount: resultCount ];
-        properties += [ pageSize: resultReturned ];
-        properties += [ pageNumber: pageNumber ];
+        properties += [ pageSize: (resultReturned + ( jobsPerPage * (pageNumber-1) ) ) ];
+        properties += [ pageNumber: ((pageNumber-1) * jobsPerPage) ];
+        properties += [ PageTitle: params.toString() ];
 
         ThemeWriter themeWriter = new ThemeWriter( httpResponse );
 
@@ -149,7 +153,7 @@ class SearchPage implements Page {
     private LinkedHashMap resultDocumentConverter( Document doc ) {
         return [ name: extractDocumentField( doc, "title" ),
                  added: extractDocumentField( doc, "added" ),
-                 content: trimString( extractDocumentField( doc, "displayContent" ), 500, true ),
+                 content: trimString( extractDocumentField( doc, "displayContent" ), 200, true ),
                  location: extractDocumentField( doc, "location" ),
                  vendor: extractDocumentField( doc, "vendor" ),
                  link: extractDocumentField( doc, "link" ).replace( "&", "&amp;" ) ];
@@ -165,7 +169,8 @@ class SearchPage implements Page {
                 case Field.FieldType.ATOM:
                     return HtmlEncode.encode( doc.getOnlyField(fieldName).getAtom() );
                 case Field.FieldType.DATE:
-                    return doc.getOnlyField(fieldName).getDate();
+                    int day = Integer.parseInt(doc.getOnlyField(fieldName).getDate().format("dd"));
+                    return doc.getOnlyField(fieldName).getDate().format("MMM dd") + makeSuffix( day );
             }
         }
 
@@ -189,6 +194,28 @@ class SearchPage implements Page {
             }
         }
         return string;
+    }
+
+    public String makeSuffix( int dayOfMonth ) {
+        String suffix = "";
+        switch ( dayOfMonth ) {
+            case 1:
+            case 21:
+            case 31:
+                suffix = "st";
+                break;
+            case 2:
+            case 22:
+                suffix = "nd";
+                break;
+            case 3:
+            case 23:
+                suffix = "rd";
+                break;
+            default:
+                suffix = "th";
+        }
+        return suffix;
     }
 
 }

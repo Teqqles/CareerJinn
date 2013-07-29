@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>$Site: $PageTitle</title>
+    <title>$PageTitle | career search at careerjinn.com</title>
     <meta charset="utf-8" />
     <meta name="keywords" content="$PageKeywords" />
     <meta name="description" content="$PageDescription" />
@@ -16,7 +16,7 @@
                 <label for="keywords">What?</label><input id="keywords" class="text" type="text" name="q" title="Job Title / Skills / Company Name" value="$keywords" />
             </div>
             <div class="field_box">
-                <label for="location">Where?</label><input id="location" class="text" type="text" name="l" title="City / Country / Post Code" value="$location" />
+                <label for="location">Where?</label><input id="location" class="text" type="text" name="l" title="City / Country / Postcode" value="$location" />
             </div>
             <div class="field_box">
                 <input class="submit button brown round large" type="submit" name="submit" value="Find Jobs"/>
@@ -68,13 +68,13 @@
             %>
             <div class="row">
                 <h2 class="jobtitle">
-                    <a rel="nofollow" href="<%= result.value.link %>" onClick="trackOutboundLink(this, 'Outbound Links', '<%= result.value.link %>' ); return false;" target="_blank"><%= result.value.name %></a>
+                    <a rel="nofollow" href="<%= result.value.link %>" onClick="trackOutboundLink(this, 'Outbound Links', '<%= result.value.link %>' ); return true;" target="_blank"><%= result.value.name %></a>
                 </h2>
                 <div class="details"><span class="company"><%= result.value.vendor %></span> | <span class="location"><%= result.value.location %></span></div>
                 <div class="summary">
                     <%= result.value.content %>
                 </div>
-                <span class="date">Posted on <%= result.value.added %> by <%= result.value.vendor %></span> | <span class="more"><a rel="nofollow" href="<%= result.value.link %>" onClick="trackOutboundLink(this, 'Outbound Links', '<%= result.value.link %>' ); return false;" target="_blank">View More Details</a></span> | <span class="apply"><a rel="nofollow" href="<%= result.value.link %>" onClick="trackOutboundLink(this, 'Outbound Links', '<%= result.value.link %>' ); return false;" target="_blank">Apply</a></span>
+                <span class="date"><%= result.value.added %> by <%= result.value.vendor %></span> | <span class="apply"><a rel="nofollow" href="<%= result.value.link %>" onClick="trackOutboundLink(this, 'Outbound Links', '<%= result.value.link %>' ); return true;" target="_blank">Apply</a></span>
             </div>
             <%
             }
@@ -114,7 +114,7 @@ google_ad_height = 600;
                     } catch(err){}
 
                     setTimeout(function() {
-                        document.location.href = link.href;
+                        return true;
                     }, 100);
                 }
     </script>

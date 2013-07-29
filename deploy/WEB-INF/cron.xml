@@ -15,7 +15,7 @@
     <cron>
         <url>/import?Site=itjb</url>
         <description>Add jobs from ITJB</description>
-        <schedule>every sunday 22:00</schedule>
+        <schedule>every day 22:00</schedule>
         <timezone>Europe/London</timezone>
     </cron>
 </cronentries>

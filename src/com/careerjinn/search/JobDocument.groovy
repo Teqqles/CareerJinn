@@ -188,7 +188,7 @@ class JobDocument {
         if ( !body ) {
             body = html; // we could not extract the body so we assume we have a plain text advert
         }
-        return body.replaceAll( "<[^>]*>", "" ); //remove unwanted HTML formatting
+        return body.replaceAll( "<[^>]*>", " " ); //remove unwanted HTML formatting
     }
 
     public static String trimString(String string, int length, boolean soft) {

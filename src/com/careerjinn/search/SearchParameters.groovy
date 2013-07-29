@@ -83,7 +83,7 @@ class SearchParameters {
     }
 
     private static String removeLocationDefaults( String location ) {
-        if( location == "City / Country / Post Code" ) {
+        if( location == "City / Country / Postcode" ) {
             location = "";
         }
         return location;
