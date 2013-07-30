@@ -24,6 +24,8 @@ class PageFactory {
                 return new TreePage();
             case "SaveSearch":
                 return new SaveSearchPage();
+            case "PrivacyPolicy":
+                return new PrivacyPolicy();
             default:
                 return new HomePage();
         }

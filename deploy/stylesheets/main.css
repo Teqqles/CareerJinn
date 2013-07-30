@@ -176,9 +176,13 @@ body, html {
     color: #552000;
 }
 
-#results {
+#results, #policy {
     clear: both;
     font-size: 0.8em;
+}
+
+#policy a, #copyright a {
+    color: #002E3F;
 }
 
 .saved_searches, .popular_searches {
@@ -206,9 +210,13 @@ body, html {
     margin-bottom: 10px;
 }
 
-.jobtitle h2, .jobtitle a {
+.jobtitle h2, .jobtitle a, h1 {
     color: #552000;
     font-size: 1em;
+}
+
+h1 {
+    font-size: 2em;
 }
 
 .details, .date {
@@ -232,6 +240,8 @@ body, html {
 }
 
 #copyright {
+    margin-top:1em;
+    padding-bottom:2em;
     clear: both;
     text-align: center;
     width: 1100px;
