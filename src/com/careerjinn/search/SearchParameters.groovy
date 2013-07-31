@@ -142,7 +142,7 @@ class SearchParameters {
         String params = "";
         if ( keywords != "" ) {
             params += keywords;
-            params += " ";
+            params += " Jobs ";
         } else {
             params += "All Jobs ";
         }

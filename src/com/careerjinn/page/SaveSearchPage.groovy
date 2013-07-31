@@ -53,17 +53,24 @@ class SaveSearchPage implements Page {
     @Override
     void renderPage() {
 
-        params = new SearchParameters();
-        params
-                .setKeywords( httpRequest.getParameter( "q" ) )  // query/keywords
-                .setLocation( httpRequest.getParameter( "l" ) ); // location
+        String parameters = "q=&l=";
 
-        SaveSearch saveSearch = new SaveSearch();
-        saveSearch.addParameters( params );
-        saveSearch.save( httpRequest, httpResponse );
+        if ( httpRequest.getParameter( "q" ) != null ) {
 
+            params = new SearchParameters();
+            params
+                    .setKeywords( httpRequest.getParameter( "q" ) )  // query/keywords
+                    .setLocation( httpRequest.getParameter( "l" ) ); // location
+
+            SaveSearch saveSearch = new SaveSearch();
+            saveSearch.addParameters( params );
+            saveSearch.save( httpRequest, httpResponse );
+
+            parameters = params.cookieCode();
+
+        }
         //redirect back to search page
-        httpResponse.sendRedirect( "?Page=Search&" + params.cookieCode() );
+        httpResponse.sendRedirect( "?Page=Search&" + parameters );
     }
 
 }

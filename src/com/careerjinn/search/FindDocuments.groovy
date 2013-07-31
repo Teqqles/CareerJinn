@@ -24,16 +24,17 @@ class FindDocuments {
      * @param queryString
      * @param limit
      * @param cursor
-     * @return Results<ScoredDocument>
+     * @return Results < ScoredDocument >
      */
-    public static Results<ScoredDocument> findDocuments( String queryString, int limit, int page ) {
+    public static Results<ScoredDocument> findDocuments(String queryString, int limit, int page) {
         try {
             QueryOptions options = QueryOptions.newBuilder()
                     .setLimit(limit)
-                    .setOffset( limit * (page - 1))
-                    .setFieldsToReturn( "title", "vendor", "location", "displayContent", "link", "added" )
+                    .setOffset(limit * (page - 1))
+                    .setFieldsToReturn("title", "vendor", "location", "displayContent", "link", "added")
+                    .setNumberFoundAccuracy(10000)
                     .build();
-            Query query = Query.newBuilder().setOptions(options).build( queryString );
+            Query query = Query.newBuilder().setOptions(options).build(queryString);
             return SearchIndex.getIndex().search(query);
         } catch (SearchException e) {
             return null;

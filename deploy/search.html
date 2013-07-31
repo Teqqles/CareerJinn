@@ -11,7 +11,7 @@
     <div class="banner spacing"></div>
     <div class="banner content">
         <form>
-            <input type="hidden" name="Page" value="Search" />
+            <input type="hidden" name="Page" value="SaveSearch" />
             <div class="field_box">
                 <label for="keywords">What?</label><input id="keywords" class="text" type="text" name="q" title="Job Title / Skills / Company Name" value="$keywords" />
             </div>
@@ -20,7 +20,6 @@
             </div>
             <div class="field_box">
                 <input class="submit button brown round large" type="submit" name="submit" value="Find Jobs"/>
-                <a class="submit button red round large" href="?Page=SaveSearch&amp;$saveSearchUrl">Save Search</a>
             </div>
             <% if (related.size() != 0) { %>
             <div class="relatedskills clear">
@@ -79,6 +78,10 @@
             <%
             }
             %>
+        </div>
+        <div id="pages">
+            <span>Pages:</span>
+            $pageList
         </div>
     </div>
     <div id="right_hand_nav"><script type="text/javascript"><!--
