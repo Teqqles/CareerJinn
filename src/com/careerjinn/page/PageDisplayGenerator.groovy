@@ -39,7 +39,7 @@ class PageDisplayGenerator {
         String pageList = '<ul>';
         int offset = pageOffset();
         if ( currentPage > MIN_PAGE ) {
-            pageList += '<li><a href="?Page=Search&p='+ ( currentPage - 1 ) + '&' + params + '">&lt; Prev</a></li>';
+            pageList += '<li><a href="?Page=Search&p='+ ( currentPage - 1 ) + '&' + params + '">&lt;&lt;</a></li>';
         }
         for (int i = offset; i < offset + PAGES_DISPLAYED && i <= pageCount; i++) {
             if ( i != currentPage ) {
@@ -49,7 +49,7 @@ class PageDisplayGenerator {
             }
         }
         if ( pageCount > currentPage ) {
-            pageList += '<li><a href="?Page=Search&p='+ ( currentPage + 1 ) + '&' + params + '">Next &gt;</a></li>';
+            pageList += '<li><a href="?Page=Search&p='+ ( currentPage + 1 ) + '&' + params + '">&gt;&gt;</a></li>';
         }
         pageList += '</ul>';
         return pageList;

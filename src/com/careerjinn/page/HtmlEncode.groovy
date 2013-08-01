@@ -16,6 +16,9 @@ class HtmlEncode {
      * @return String
      */
     public static String encode( String unsafeString ) {
+        if ( unsafeString == null ) {
+            return "";
+        }
         String safeString = unsafeString.replace( "<", "&lt;" )
                                         .replace( '"', "&quot;" )
                                         .replace( "\u00A3", "&pound;" );
@@ -29,6 +32,9 @@ class HtmlEncode {
      * @return String
      */
     public static String decode( String unsafeString ) {
+        if ( unsafeString == null ) {
+            return "";
+        }
         String safeString = unsafeString.replace( "&lt;", "<" )
                                         .replace( "&quot;", '"' )
                                         .replace( "&pound;", "\u00A3" );
