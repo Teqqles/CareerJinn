@@ -162,6 +162,10 @@ body, html {
     padding: 5px;
 }
 
+#result_message {
+    padding-bottom: 10px;
+}
+
 .clear {
     clear: both;
 }
@@ -185,25 +189,41 @@ body, html {
     color: #002E3F;
 }
 
-.saved_searches, .popular_searches {
-    padding-top: 30px;
+.saved_searches, .popular_searches, .tools {
+    padding-top: 0px;
     color: #552000;
     font-size: 0.8em;
 }
 
 #home .saved_searches, .popular_searches {
-    width: 300px;
+    padding-top: 5px;
+}
+
+#searcbes {
+    width: 900px;
     margin: 0 auto;
 }
 
-.saved_searches ul, .popular_searches ul {
+hr {
+    background-color: #DD8060;
+    border: 0;
+    height: 1px;
+    margin: 10px 0;
+}
+
+#home .saved_searches, .popular_searches {
+    float: left;
+    width: 300px;
+}
+
+.saved_searches ul, .popular_searches ul, .tools ul {
     margin-top: 10px;
 }
-.saved_searches li, .popular_searches li {
+.saved_searches li, .popular_searches li, .tools li {
     margin-top: 7px;
 }
 
-.saved_searches hr, .popular_searches hr {
+.saved_searches hr, .popular_searches hr, .tools hr {
     background-color: #DD8060;
     border: 0;
     height: 1px;
@@ -227,7 +247,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-.more a, .apply a, .saved_searches a {
+.more a, .apply a, .saved_searches a, .tools a {
     color: #002E3F;
 }
 

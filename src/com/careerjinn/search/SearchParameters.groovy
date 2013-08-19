@@ -68,7 +68,6 @@ class SearchParameters {
      * @return
      */
     public LinkedHashMap getProperties() {
-        System.out.println( this.keywords );
         return [ keywords: HtmlEncode.encode( this.keywords ),
                  location: HtmlEncode.encode( this.location ),
                  saveSearchUrl: cookieCode().replace( "&", "&amp;" )

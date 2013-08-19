@@ -20,7 +20,6 @@ class SearchQuery {
      * @return String
      */
     public String buildSearchQuery( SearchParameters params ) {
-        String today = new SimpleDateFormat("yyyy-MM-dd").format( new Date() );
         if( params.getKeywords() != "" ) {
             keywords = sanitizeTerms( params.getKeywords() );
             if ( keywords != "" ) {
@@ -28,7 +27,9 @@ class SearchQuery {
             }
         }
         if( params.getLocation() != "" ) {
+            PostCodeSubstitution postcode = new PostCodeSubstitution();
             location = sanitizeTerms( params.getLocation() );
+            location = postcode.substitutePostCode( location );
             if ( location != "" ) {
                 if ( query != "" ) {
                     query += " AND ";
@@ -36,10 +37,6 @@ class SearchQuery {
                 query += "location:(" + location + ")";
             }
         }
-        if ( query != "" ) {
-            query += " AND ";
-        }
-        query += "expires >= " + today;
         System.out.println( query );
         return query;
     }
@@ -52,6 +49,7 @@ class SearchQuery {
      */
     public String sanitizeTerms( String terms ) {
         terms = terms.replace( "<", "" );
+        terms = terms.replace( "'", "\"" );
         terms = terms.replace( ">", "" );
         terms = removeUnclosedCharacter( terms, '"' as char );
         terms = removeUnclosedCharacter( terms, "'" as char );

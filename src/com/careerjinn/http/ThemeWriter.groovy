@@ -27,8 +27,8 @@ class ThemeWriter {
         this.httpResponse = httpResponse;
     }
 
-    public void generateResponseHeader() {
-        httpResponse.contentType = "text/html";
+    public void generateResponseHeader( String type = "text/html" ) {
+        httpResponse.contentType = type;
         httpResponse.characterEncoding = "UTF-8";
     }
 
@@ -44,7 +44,7 @@ class ThemeWriter {
         def templateFile = new FileReader( template );
         SimpleTemplateEngine engine = new SimpleTemplateEngine( );
         Template templateToDisplay = engine.createTemplate( templateFile );
-        httpResponse.writer.print templateToDisplay.make( binding ).toString();
+        httpResponse.writer.print templateToDisplay.make( binding.withDefault{ '' } ).toString();
     }
 
     public HttpServletResponse getHttpResponse() {

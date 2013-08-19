@@ -1,0 +1,7 @@
+http://www.careerjinn.com/
+<% if (skills.size() != 0) {
+    skills.each {
+        skill->
+            %>http://www.careerjinn.com/?Page=Search&q=<%= skill.key %>
+<% }
+} %>

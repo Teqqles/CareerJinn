@@ -21,34 +21,40 @@
         <div class="field_box">
             <input class="submit button brown round large" type="submit" name="submit" value="Find Jobs"/>
         </div>
-        <% if (related.size() != 0) { %>
-        <div class="relatedskills clear">
-            <ul>
-                <li><span>Related Skills:</span></li>
-                <%
-                related.each {
-                skill->
-                %>
-                <li><a href="?Page=Search&amp;q=<%= skill.key %>&amp;l=$location"><%= skill.value.name %></a></li>
-                <% } %>
-            </ul>
-        </div>
-        <% } %>
     </form>
 </div>
 <div id="container">
     <div id="left_hand_nav">
-        <b>$keywords</b> $joiner <b>$location</b>
-        <div class="skill_tree">
-            <% if (related.size() != 0) { %>
-            <a href="?Page=SkillTree&amp;$saveSearchUrl">View Skills Tree</a>
-            <% } %>
+        <% if (related.size() != 0) { %>
+        <div class="tools">
+            <hr />
+            <h2>Related Searches</h2>
+            <ul>
+                <%
+                related.each {
+                skill->
+                %>
+                <li><a href="?Page=Search&amp;q=<%= skill.key %>&amp;l=$location"><%= skill.value.name %> Jobs</a></li>
+                <% } %>
+            </ul>
         </div>
+        <% } %>
         <div class="saved_searches">
             <hr />
             <h2>Saved Searches</h2>
             <ul>
                 $savedSearches
+            </ul>
+        </div>
+        <div class="tools">
+            <hr />
+            <h2>Career Tools</h2>
+            <ul>
+                <% if (related.size() != 0) { %>
+                <li><a href="?Page=SkillTree&amp;$saveSearchUrl">Career Skills Tree</a></li>
+                <% } else { %>
+                <li>No tools are currently available relating to your search.</li>
+                <% } %>
             </ul>
         </div>
     </div>

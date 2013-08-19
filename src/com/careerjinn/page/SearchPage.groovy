@@ -114,6 +114,10 @@ class SearchPage implements Page {
             //log search errors
         }
 
+        if ( resultReturned == 0 ) {
+            System.out.println( "No Result Query" );
+        }
+
         int adjustedPageNumber = ((pageNumber - 1) * jobsPerPage) + 1;
         properties += [results: viewableResults];
         properties += [related: getRelatedSkills(params.getKeywords())]

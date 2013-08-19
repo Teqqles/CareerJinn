@@ -35,13 +35,16 @@ class SaveSearch {
      */
     public Boolean save( HttpServletRequest request, HttpServletResponse response ) {
         String existingSearches = getCookieContent(request.getCookies(), SAVED_SEARCH_COOKIE );
-        if ( existingSearches != "" ) {
-            //add the search divider if we are adding multiple searches
-            existingSearches += ":";
-        }
         //do not insert duplicates
         if ( existingSearches.contains( parameters.cookieCode() ) ) {
             return false;
+        }
+        if ( existingSearches.count( ':' ) >= 9 ) {
+            existingSearches = existingSearches.substring( existingSearches.indexOf( ':' ) + 1 );
+        }
+        if ( existingSearches != "" ) {
+            //add the search divider if we are adding multiple searches
+            existingSearches += ":";
         }
         response.addCookie( new Cookie( SAVED_SEARCH_COOKIE, existingSearches + parameters.cookieCode() ) );
         return true;

@@ -19,24 +19,42 @@
             <input class="submit button brown round large" type="submit" name="submit" value="Find Jobs" />
         </form>
     </div>
-    <div class="saved_searches $hiddenSearchSection">
+    <div id="searcbes">
         <hr />
-        <h2>Saved Searches</h2>
-        <ul>
-            $savedSearches
-        </ul>
+        <div>Finding a career in IT is a complex business.  It is our aim at Career Jinn to guide you through finding your next technology job, helping you discover the skills you need for employment and helping you answer your job related questions.</div>
+        <div class="saved_searches">
+            <hr />
+            <h2>Saved Searches</h2>
+            <% if ( savedSearches == '' ) { %> You have no saved searches <% } else { %>
+            <ul>
+                $savedSearches
+            </ul>
+            <% } %>
+        </div>
+        <div class="popular_searches">
+            <hr />
+            <h2>Popular IT Job Skills</h2>
+            <ul>
+                <li><a href="?Page=Search&amp;q=Developer">Developer Jobs</a></li>
+                <li><a href="?Page=Search&amp;q=Java+Developer">Java Developer Jobs</a></li>
+                <li><a href="?Page=Search&amp;q=SQL+Server">SQL Server Jobs</a></li>
+                <li><a href="?Page=Search&amp;q=C%23">C# Jobs</a></li>
+                <li><a href="?Page=Search&amp;q=PHP+Developer">PHP Developer Jobs</a></li>
+            </ul>
+        </div>
+        <div class="popular_searches">
+            <hr />
+            <h2>Popular Job Locations</h2>
+            <ul>
+                <li><a href="?Page=Search&amp;l=South+East">IT Jobs in the South East</a></li>
+                <li><a href="?Page=Search&amp;l=London">IT Jobs in London</a></li>
+                <li><a href="?Page=Search&amp;l=City+of+London">IT Jobs in the City of London</a></li>
+                <li><a href="?Page=Search&amp;l=South+West">IT Jobs in the South West</a></li>
+                <li><a href="?Page=Search&amp;l=Manchester">IT Jobs in Manchester</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="popular_searches">
-        <hr />
-        <h2>Popular Searches</h2>
-        <ul>
-            <li><a href="?Page=Search&amp;q=Developer&amp;l=South+East">Developer in South East</a></li>
-            <li><a href="?Page=Search&amp;q=Java+Developer&amp;l=London">Java Developer in London</a></li>
-            <li><a href="?Page=Search&amp;q=SQL+Server&amp;l=City+of+London">SQL Server in City of London</a></li>
-            <li><a href="?Page=Search&amp;q=C%23&amp;l=London">C# in London</a></li>
-            <li><a href="?Page=Search&amp;q=PHP+Developer&amp;l=London">PHP Developer in London</a></li>
-        </ul>
-    </div>
+    <div class="clear"></div>
     <div id="copyright">$Copyright</div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="/js/main.js"></script>

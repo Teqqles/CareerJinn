@@ -26,6 +26,8 @@ class PageFactory {
                 return new SaveSearchPage();
             case "PrivacyPolicy":
                 return new PrivacyPolicy();
+            case "SiteMap":
+                return new SiteMapPage();
             default:
                 return new HomePage();
         }

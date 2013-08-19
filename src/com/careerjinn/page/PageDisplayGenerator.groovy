@@ -8,7 +8,6 @@ package com.careerjinn.page
 class PageDisplayGenerator {
 
     private static final int PAGES_DISPLAYED = 5;
-    private static final int OFFSET_LIMIT = Math.ceil(PAGES_DISPLAYED / 2);
     private static final int OFFSET = Math.floor(PAGES_DISPLAYED / 2);
     private static final int MIN_PAGE = 1;
 
@@ -36,6 +35,9 @@ class PageDisplayGenerator {
     }
 
     public String pageDisplay( String params ) {
+        if ( pageCount <= 1 ) {
+            return '<ul></ul>'; //don't show paging for a single page of results.
+        }
         String pageList = '<ul>';
         int offset = pageOffset();
         if ( currentPage > MIN_PAGE ) {
