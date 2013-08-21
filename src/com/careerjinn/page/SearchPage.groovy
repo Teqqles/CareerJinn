@@ -125,6 +125,8 @@ class SearchPage implements Page {
         properties += [pageList: pageListGenerator(resultCount, jobsPerPage, pageNumber)];
         properties += [pageSize: (resultReturned + (jobsPerPage * (pageNumber - 1)))];
         properties += [pageNumber: adjustedPageNumber ];
+        properties += [PageKeywords: params.toString().trim() + ", Find Jobs, Job Search, Vacancy Search, Java Jobs"];
+        properties += [PageDescription: params.toString().trim() + " and skill search for IT candidates. Find the skill set you need to land your dream job" ];
         properties += [PageTitle: params.toString()];
 
         ThemeWriter themeWriter = new ThemeWriter(httpResponse);
