@@ -3,6 +3,16 @@ CareerJinn
 
 College Project for Job Board 2.0
 
+----
+
+This repo was created originally to facilitate the completion of a college project which ultimately was executed on Google App Engine using a combination of Java and Groovy.
+
+I have opened the source up as an example of what can be done on GAE in a very short space of time.  The code should be considered a prototype and is not well engineered in a number of places, especially when nearing crunch-time.
+
+You have permission to use this code freely for your own work but I would be grateful for some attribution.
+
+----
+
 This project will be hosted on <a href="http://www.careerjinn.com">http://www.careerjinn.com</a> and tested via <a href="http://careerjinn.appspot.com/">http://careerjinn.appspot.com/</a>
 
 The following development has been completed:
